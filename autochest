@@ -32,10 +32,7 @@ local PlaceID = game.PlaceId
          for i,v in pairs(Site.data) do
              local Possible = true
              ID = tostring(v.id)
-if game:GetService("Players")["LocalPlayer"].Data.Beli.Value >= 26000 then
-     wait(.1)
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
-end             
+           
              if tonumber(v.maxPlayers) > tonumber(v.playing) then
                  for _,Existing in pairs(AllIDs) do
                      if num ~= 0 then
