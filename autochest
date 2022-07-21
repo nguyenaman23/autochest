@@ -8,20 +8,6 @@ repeat wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
 repeat wait()
 until game.Players.LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == true or game.Players.LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == false
 
-if game.CoreGui:FindFirstChild("NewUi") then
-    game.CoreGui:FindFirstChild("NewUi"):Destroy()
-end
-spawn(function()
-    while wait() do 
-        if DevilAutoBuy then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
-        end
-    end
-end)
-getgenv().Server_Hop = false
-getgenv().Chest_Farm = true
-getgenv().wait_Time = 35 -- Seconds
-
 local placeId = game.PlaceId
 if placeId == 2753915549 or placeId == 4442272183 or placeId == 7449423635 then
 repeat wait() until game:IsLoaded() ~= false
