@@ -12,11 +12,6 @@ local PlaceID = game.PlaceId
      local File = pcall(function()
          AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
      end)
-     if game:GetService("Players")["LocalPlayer"].Data.Beli.Value >= 26000 then
-     wait(.1)
-     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
-     
-end  
      if not File then
          table.insert(AllIDs, actualHour)
          writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
